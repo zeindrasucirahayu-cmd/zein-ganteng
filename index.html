@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keindahan Alam Hijau Tua</title>
+    <title>Keindahan Alam Hijau Tua - Galeri</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
@@ -13,6 +13,7 @@
             --dark-green: #0A360A; /* Hijau Tua Utama */
             --forest-green: #1B5E20; /* Hijau Hutan untuk Aksen */
             --light-cream: #F5F5DC; /* Krem Muda untuk Teks */
+            --subtle-green: #E8F5E9; /* Hijau Sangat Muda untuk Background Galeri */
         }
 
         /* Styling Umum */
@@ -70,9 +71,29 @@
         .card {
             border: none;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+             transform: translateY(-5px); /* Efek hover pada card */
         }
         .card-title {
             color: var(--forest-green);
+        }
+
+        /* Styling Galeri */
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 250px; /* Tinggi gambar tetap */
+            object-fit: cover; /* Memastikan gambar terisi penuh tanpa distorsi */
+            transition: transform 0.5s ease;
+        }
+        .gallery-item img:hover {
+            transform: scale(1.05); /* Zoom in saat hover */
         }
     </style>
 </head>
@@ -93,7 +114,7 @@
                         <a class="nav-link" href="#destinasi">Destinasi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#galeri">Galeri</a>
+                        <a class="nav-link" href="#galeri-detail">Galeri</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#kontak">Kontak</a>
@@ -152,18 +173,73 @@
         </div>
     </section>
 
-    <hr>
-
     <section id="galeri" class="content-section bg-success bg-opacity-10">
         <div class="container text-center">
             <h2 class="mb-4 display-6 fw-bold text-dark-green">Mari Abadikan Momen Terbaik Anda!</h2>
             <p class="mb-5">Lihat galeri foto kami dan rencanakan petualangan Anda selanjutnya.</p>
-            <a href="#" class="btn btn-forest-gem">
+            <a href="#galeri-detail" class="btn btn-forest-gem">
                 <i class="fas fa-camera"></i> Kunjungi Galeri
             </a>
             </div>
     </section>
 
+    <hr>
+
+    <section id="galeri-detail" class="content-section" style="background-color: var(--subtle-green);">
+        <div class="container">
+            <h2 class="text-center mb-5 display-5 fw-bold text-dark-green"><i class="fas fa-image"></i> Galeri Keindahan Abadi</h2>
+            
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+                <div class="col">
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/id/10/400/250" alt="Pemandangan Kabut">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/id/1018/400/250" alt="Pendaki Siluet">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/id/1040/400/250" alt="Sungai Jernih">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/id/1051/400/250" alt="Hutan Pinus">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/id/1063/400/250" alt="Bunga Edelweiss">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/id/1079/400/250" alt="Jalur Setapak">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/id/1083/400/250" alt="Puncak Bersalju">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/id/1090/400/250" alt="Matahari Terbit">
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="#" class="btn btn-forest-gem">
+                    <i class="fas fa-cloud-download-alt"></i> Muat Lebih Banyak
+                </a>
+            </div>
+        </div>
+    </section>
+    
     <footer id="kontak" class="py-4 mt-5" style="background-color: var(--dark-green);">
         <div class="container text-center">
             <p class="mb-0" style="color: var(--light-cream);">&copy; 2025 GreenScape. Hak Cipta Dilindungi.</p>
@@ -175,6 +251,6 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivrno.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
