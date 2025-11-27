@@ -3,43 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ol3h Ol3h - Pusat Jajanan Tradisional</title>
+    <title>Keindahan Alam Hijau Tua</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <style>
+        /* Variabel Warna */
+        :root {
+            --dark-green: #0A360A; /* Hijau Tua Utama */
+            --forest-green: #1B5E20; /* Hijau Hutan untuk Aksen */
+            --light-cream: #F5F5DC; /* Krem Muda untuk Teks */
+        }
+
+        /* Styling Umum */
+        body {
+            background-color: var(--light-cream);
+            color: var(--dark-green);
+        }
+
+        /* Navbar & Header */
+        .navbar {
+            background-color: var(--dark-green) !important;
+        }
+        .navbar-brand, .nav-link {
+            color: var(--light-cream) !important;
+        }
+        .navbar-brand:hover, .nav-link:hover {
+            color: #C8E6C9 !important; /* Hijau sangat muda saat hover */
+        }
         .hero-section {
-            background-color: #f8f9fa; /* Warna latar belakang ringan */
-            padding: 5rem 0;
-            margin-bottom: 2rem;
-            text-align: center;
+            background: linear-gradient(rgba(10, 54, 10, 0.6), rgba(10, 54, 10, 0.6)), url('https://picsum.photos/1200/600?nature') no-repeat center center;
+            background-size: cover;
+            color: var(--light-cream);
+            padding: 8rem 0;
         }
-        .product-card {
+
+        /* Styling Tombol Unik (Forest Gem Button) */
+        .btn-forest-gem {
+            background-color: var(--forest-green);
+            color: var(--light-cream);
+            border: 2px solid var(--light-cream);
+            padding: 10px 30px;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Shadow untuk efek timbul */
+            border-radius: 50px; /* Bentuk pil */
+        }
+        .btn-forest-gem:hover {
+            background-color: var(--light-cream);
+            color: var(--dark-green);
+            border: 2px solid var(--forest-green);
+            transform: translateY(-3px); /* Sedikit naik saat hover */
+            box-shadow: 0 8px 10px rgba(0, 0, 0, 0.4);
+        }
+        .btn-forest-gem:active {
+            transform: translateY(0); /* Kembali ke posisi semula saat diklik */
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Styling Bagian Konten */
+        .content-section {
+            padding: 4rem 0;
+        }
+        .card {
             border: none;
-            transition: transform 0.3s;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        .card-title {
+            color: var(--forest-green);
         }
     </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top">
+    <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">OL3H OL3H</a>
+            <a class="navbar-brand" href="#"><i class="fas fa-mountain"></i> **GREEN**SCAPE</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#pengenalan">Beranda</a>
+                        <a class="nav-link active" aria-current="page" href="#">Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#keunggulan">Keunggulan</a>
+                        <a class="nav-link" href="#destinasi">Destinasi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#produk">Produk Kami</a>
+                        <a class="nav-link" href="#galeri">Galeri</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#kontak">Kontak</a>
@@ -49,94 +103,74 @@
         </div>
     </nav>
 
-    <main class="container mt-4">
-
-        <section id="pengenalan" class="hero-section text-dark">
-            <div class="container">
-                <h1 class="display-4 fw-bolder text-success">Selamat Datang di Ol3h Ol3h!</h1>
-                <p class="lead">Pusat Jajanan dan Oleh-Oleh Khas Daerah Terbaik. Rasakan manisnya tradisi dalam setiap gigitan.</p>
-                <hr class="my-4">
-                <p>Kami bangga menyajikan makanan tradisional otentik, diolah dari resep turun-temurun dan bahan-bahan berkualitas pilihan.</p>
-                <a class="btn btn-success btn-lg" href="#produk" role="button">Lihat Produk Unggulan</a>
-            </div>
-        </section>
-
-        <section id="keunggulan" class="my-5">
-            <h2 class="text-center mb-4 text-success">Mengapa Memilih Ol3h Ol3h?</h2>
-            <div class="row text-center">
-                <div class="col-md-4 mb-4">
-                    <div class="p-4 border rounded shadow-sm h-100">
-                        <h3 class="h5 mb-3 text-success">✅ Resep Autentik</h3>
-                        <p>Diolah dengan resep asli warisan leluhur untuk menjaga cita rasa tradisional yang sesungguhnya.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="p-4 border rounded shadow-sm h-100">
-                        <h3 class="h5 mb-3 text-success">🌿 Bahan Baku Pilihan</h3>
-                        <p>Menggunakan bahan baku alami dan segar tanpa pengawet buatan, dijamin kualitas dan kesehatannya.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="p-4 border rounded shadow-sm h-100">
-                        <h3 class="h5 mb-3 text-success">📦 Kemasan Higienis</h3>
-                        <p>Produk dikemas secara modern dan higienis, menjamin produk tetap lezat saat tiba di tangan Anda.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <hr>
-
-        <section id="produk" class="my-5">
-            <h2 class="text-center mb-5 text-success">Produk Tradisional Pilihan Ol3h Ol3h</h2>
-            <div class="row">
-                
-                <div class="col-md-4 mb-4">
-                    <div class="card product-card">
-                        <img src="dodol.webp">
-                        <div class="card-body text-center">
-                            <h5 class="card-title fw-bold text-success">Dodol Manis Legit</h5>
-                            <p class="card-text">Kudapan kenyal dengan rasa manis legit dari santan dan gula merah pilihan. Favorit sepanjang masa.</p>
-                            <a href="#" class="btn btn-outline-success">Pesan Sekarang</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <div class="card product-card">
-                        <img src="burayot.jpg">
-                        <div class="card-body text-center">
-                            <h5 class="card-title fw-bold text-success">Burayot Garing</h5>
-                            <p class="card-text">Camilan khas yang digoreng hingga garing, memiliki tekstur lembut di dalam dan renyah di luar.</p>
-                            <a href="#" class="btn btn-outline-success">Pesan Sekarang</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <div class="card product-card">
-                        <img src="ali agrem.jpg">
-                        <div class="card-body text-center">
-                            <h5 class="card-title fw-bold text-success">Ali Agrem Istimewa</h5>
-                            <p class="card-text">Kue berbentuk cincin dengan rasa manis gula aren. Cocok sebagai teman minum teh atau kopi.</p>
-                            <a href="#" class="btn btn-outline-success">Pesan Sekarang</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-        
-    </main>
-
-    <footer id="kontak" class="bg-dark text-white text-center py-4 mt-5">
+    <header class="hero-section text-center">
         <div class="container">
-            <p>&copy; 2025 Ol3h Ol3h. Semua Hak Dilindungi.</p>
-            <p>Hubungi Kami: <a href="mailto:info@ol3hol3h.com" class="text-white">info@ol3hol3h.com</a> | Telepon: (021) 1234 5678</p>
-            <div>
-                <a href="#" class="text-white mx-2">Facebook</a> |
-                <a href="#" class="text-white mx-2">Instagram</a> |
-                <a href="#" class="text-white mx-2">WhatsApp</a>
+            <h1 class="display-3 fw-bold mb-4">Eksplorasi Keindahan Alam Liar</h1>
+            <p class="lead mb-5">Temukan ketenangan di pegunungan yang diselimuti kehijauan abadi.</p>
+            <a href="#destinasi" class="btn btn-forest-gem">
+                <i class="fas fa-leaf"></i> Jelajahi Sekarang
+            </a>
+            </div>
+    </header>
+    
+
+    <section id="destinasi" class="content-section">
+        <div class="container">
+            <h2 class="text-center mb-5 display-5 fw-bold text-dark-green">Destinasi Puncak</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://picsum.photos/400/300?mountain" class="card-img-top" alt="Puncak Tertinggi">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-hiking"></i> Lembah Sunyi</h5>
+                            <p class="card-text">Lembah tersembunyi dengan sungai kristal dan flora langka. Tempat sempurna untuk meditasi.</p>
+                            <a href="#" class="btn btn-sm btn-outline-success">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://picsum.photos/400/300?lake" class="card-img-top" alt="Danau Biru">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-water"></i> Danau Zamrud</h5>
+                            <p class="card-text">Danau di kaki gunung dengan air berwarna hijau kebiruan, dikelilingi pinus tua.</p>
+                            <a href="#" class="btn btn-sm btn-outline-success">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://picsum.photos/400/300?forest" class="card-img-top" alt="Hutan Rimba">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-tree"></i> Hutan Purba</h5>
+                            <p class="card-text">Jalur pendakian yang menantang melalui hutan rimbun yang belum tersentuh.</p>
+                            <a href="#" class="btn btn-sm btn-outline-success">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="galeri" class="content-section bg-success bg-opacity-10">
+        <div class="container text-center">
+            <h2 class="mb-4 display-6 fw-bold text-dark-green">Mari Abadikan Momen Terbaik Anda!</h2>
+            <p class="mb-5">Lihat galeri foto kami dan rencanakan petualangan Anda selanjutnya.</p>
+            <a href="#" class="btn btn-forest-gem">
+                <i class="fas fa-camera"></i> Kunjungi Galeri
+            </a>
+            </div>
+    </section>
+
+    <footer id="kontak" class="py-4 mt-5" style="background-color: var(--dark-green);">
+        <div class="container text-center">
+            <p class="mb-0" style="color: var(--light-cream);">&copy; 2025 GreenScape. Hak Cipta Dilindungi.</p>
+            <div class="mt-2">
+                <a href="#" class="text-white mx-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
             </div>
         </div>
     </footer>
